@@ -98,7 +98,8 @@ public class SimpleSample extends ChaincodeBase {
 		}catch(NumberFormatException e ){
 			e.printStackTrace();
 			return "{\"Error\":\"Expecting integer value for amount \"}";
-		}		
+		}
+		valA += 1;		
 		if(valA>valFrom)
 			return "{\"Error\":\"Insufficient asset holding value for requested transfer amount \"}";
 		valFrom = valFrom-valA;
@@ -150,7 +151,7 @@ public class SimpleSample extends ChaincodeBase {
 
 	@Override
 	public String getChaincodeID() {
-		return "SimpleSample";
+		return "BancoBezerro";
 	}
 
 	public static void main(String[] args) throws Exception {

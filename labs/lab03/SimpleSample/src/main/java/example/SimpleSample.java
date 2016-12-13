@@ -99,10 +99,9 @@ public class SimpleSample extends ChaincodeBase {
 			e.printStackTrace();
 			return "{\"Error\":\"Expecting integer value for amount \"}";
 		}
-		valA += 1;		
-		if(valA>valFrom)
+		if(valA+1>valFrom)
 			return "{\"Error\":\"Insufficient asset holding value for requested transfer amount \"}";
-		valFrom = valFrom-valA;
+		valFrom = valFrom-valA-1;
 		valTo = valTo+valA;
 		System.out.println("Transfer "+fromName+">"+toName+" am='"+am+"' new values='"+valFrom+"','"+ valTo+"'");
 		stub.putState(fromName,""+ valFrom);

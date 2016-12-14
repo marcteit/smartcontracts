@@ -1,6 +1,16 @@
-http://github.com/plucena/learn-chaincode/
+1. FORK  http://github.com/plucena/learn-chaincode-1/
 
-https://github.com/plucena/learn-chaincode/blob/master/finished/chaincode_finished.go
+![fork](https://github.com/plucena/learn-chaincode-1/blob/master/imgs/fork.png)
+
+
+2. RETRIEVE YOUR BLOCKCHAIN REST URLS (USE CAR LEASE DEPLOY OR CREATE NEW SERVICE)
+
+![go1](https://github.com/plucena/smartcontracts/blob/master/labs/lab06/img/img1.png)
+
+![go2](https://github.com/plucena/smartcontracts/blob/master/labs/lab06/img/img2.png)
+
+
+FOR THE NEXT EXAMPLES USE YOUR BLOCKCHAIN URL!
 
 
 REGISTER
@@ -14,14 +24,14 @@ REGISTER
 
 DEPLOY
 ------
- 	https://b20d828038124c06b200c36d49738e7d-vp0.us.blockchain.ibm.com:5003/chaincode
+ 	http://172.24.14.100:7050/chaincode
 	{
       	"jsonrpc": "2.0",
       	"method": "deploy",
       	"params": {
           "type": 1,
           "chaincodeID": {
-              "path": "https://github.com/IBM-Blockchain/learn-chaincode/finished"
+              "path": "https://github.com/YOUR-GIT-ID/learn-chaincode-1/finished"
           },
           "ctorMsg": {
             "function": "init",
@@ -35,7 +45,7 @@ DEPLOY
 
 QUERY
 ------
-	https://b20d828038124c06b200c36d49738e7d-vp0.us.blockchain.ibm.com:5003/chaincode
+	http://172.24.14.100:7050/chaincode
 	{
       	"jsonrpc": "2.0",
      	 "method": "query",
@@ -56,7 +66,7 @@ QUERY
   
 INVOKE
 ------
-	https://b20d828038124c06b200c36d49738e7d-vp0.us.blockchain.ibm.com:5003/chaincode
+	http://172.24.14.100:7050/chaincode
 	{
     	"jsonrpc": "2.0",
    	 "method": "invoke",
@@ -81,7 +91,7 @@ INVOKE
 
 QUERY
 ------
-	https://b20d828038124c06b200c36d49738e7d-vp0.us.blockchain.ibm.com:5003/chaincode
+	http://172.24.14.100:7050/chaincode
 	{
       	"jsonrpc": "2.0",
      	 "method": "query",
